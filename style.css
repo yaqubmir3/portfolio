@@ -1,3 +1,51 @@
+/* Enable automatic dark mode support */
+html {
+  color-scheme: light dark;
+}
+
+/* Update nav border color to adapt to dark mode */
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  margin-bottom: 1em;
+  background-color: canvas;      /* This makes nav background auto-adapt */
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  padding: 0.5em;
+  text-decoration: none;
+  color: canvastext;      /* Always adapts to light/dark */
+}
+
+/* Update nav hover background for dark mode */
+nav a:hover {
+  background-color: color-mix(in oklch, rgb(164, 97, 176), canvas 85%);
+  border-bottom: 2px solid rgb(164, 97, 176);
+}
+
+/* Style for the color scheme switcher */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+  z-index: 1000;
+}
+
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ...existing code below... */
+
+
+
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
@@ -27,11 +75,6 @@ p {
   padding: 5px;
 }
 
-nav {
-  display: flex;
-  margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
-}
 
 nav ul {
   display: flex;
@@ -45,22 +88,10 @@ nav li {
   flex: 1;
 }
 
-nav a {
-  display: block;
-  text-align: center;
-  padding: 0.5em;
-  text-decoration: none;
-  color: black;
-}
-
-nav a:hover {
-  background-color: rgb(221, 205, 225);
-  border-bottom: 2px solid rgb(164, 97, 176);
-}
 
 a,
 a:visited {
-  color: black;
+  color: canvastext;
   text-decoration: none;
 }
 
