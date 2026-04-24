@@ -61,4 +61,45 @@ select.addEventListener('input', function (event) {
   localStorage.colorScheme = event.target.value;
 });
 
-// ...existing code below...
+// LAB 4 CODE
+
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+    return [];
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) {
+    console.error('Invalid container element for rendering projects.');
+    return;
+  }
+  containerElement.innerHTML = '';
+  if (!Array.isArray(projects) || projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects to display.</p>';
+    return;
+  }
+  for (const project of projects) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${project.title || 'Untitled Project'}</${headingLevel}>
+      <img src="${project.image || 'https://vis-society.github.io/labs/2/images/empty.svg'}" alt="${project.title || 'Project'}">
+      <p>${project.description || ''}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+
+
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

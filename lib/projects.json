@@ -1,0 +1,74 @@
+[
+  {
+    "title": "HTML & CSS Basics Lab",
+    "year": 2021,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Learned how to structure webpages using HTML and style them with CSS."
+  },
+  {
+    "title": "JavaScript Intro Assignment",
+    "year": 2021,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built basic interactive features using JavaScript."
+  },
+  {
+    "title": "Responsive Design Practice",
+    "year": 2022,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Created layouts that adapt to different screen sizes using flexbox and grid."
+  },
+  {
+    "title": "Data Cleaning Exercise",
+    "year": 2022,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Processed messy datasets and prepared them for analysis."
+  },
+  {
+    "title": "Interactive Web Page Lab",
+    "year": 2022,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built a dynamic webpage with DOM manipulation and events."
+  },
+  {
+    "title": "Python Data Analysis Project",
+    "year": 2023,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Used Python and pandas to explore and summarize datasets."
+  },
+  {
+    "title": "Data Visualization Basics",
+    "year": 2023,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Created simple charts and plots to visualize data trends."
+  },
+  {
+    "title": "D3.js Intro Project",
+    "year": 2023,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built interactive visualizations using D3.js."
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "year": 2023,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Designed and built a personal website to showcase projects."
+  },
+  {
+    "title": "API Data Fetching Project",
+    "year": 2024,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Fetched and displayed live data from a public API."
+  },
+  {
+    "title": "Advanced JavaScript App",
+    "year": 2024,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built a more complex web app using modular JavaScript."
+  },
+  {
+    "title": "Final Data Science Project",
+    "year": 2024,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Combined data analysis and visualization techniques into a final project."
+  }
+]
