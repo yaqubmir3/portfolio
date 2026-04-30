@@ -256,3 +256,86 @@ h6 {
   text-align: right;
   font-weight: 600;
 }
+
+.project-year {
+  color: gray;
+  font-size: 0.85em;
+  font-style: italic;
+  margin: 0;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin: 1em;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  padding: 1em;
+  margin: 1em 0;
+  border: 1px solid color-mix(in oklch, canvastext 20%, transparent);
+  border-radius: 8px;
+  list-style: none;
+  flex: 1;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+#projects-pie-plot path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+.searchBar {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  font: inherit;
+  border: 1px solid color-mix(in oklch, canvastext 30%, transparent);
+  border-radius: 8px;
+  background: canvas;
+  color: canvastext;
+}
