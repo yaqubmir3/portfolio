@@ -339,3 +339,100 @@ h6 {
   background: canvas;
   color: canvastext;
 }
+
+
+
+/* ── Lab 6: Meta page styles ── */
+
+dl.stats {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+  margin: 1em auto;
+  max-width: 600px;
+}
+
+dl.stats dt {
+  opacity: 0.6;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+dl.stats dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  padding: 0.75em 1em;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  z-index: 999;
+  min-width: 220px;
+}
+
+dl.info {
+  transition-duration: 300ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+  cursor: pointer;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+.gridlines line {
+  stroke: currentColor;
+  stroke-opacity: 0.1;
+}
+
+.gridlines path {
+  display: none;
+}
+
+@keyframes marching-ants {
+  to { stroke-dashoffset: -8; }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+#selection-count {
+  text-align: center;
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+
+#language-breakdown {
+  max-width: 600px;
+  margin: 0 auto 2em;
+}
