@@ -12,8 +12,25 @@
 
   <div id="stats"></div>
 
-  <h2>Commits by time of day</h2>
-  <div id="chart"></div>
+  <div style="display: flex; align-items: baseline; gap: 1em; margin: 1em auto; max-width: 600px;">
+    <label style="flex: 1; display: flex; align-items: baseline; gap: 1em;">
+      Show commits until:
+      <input type="range" id="commit-progress" min="0" max="100" value="100" style="flex: 1;">
+      <time id="commit-time"></time>
+    </label>
+  </div>
+
+  <dl id="files"></dl>
+
+  <div id="scrolly-1">
+    <div id="scatter-story"></div>
+    <div id="scatter-plot">
+      <h2>Commits by time of day</h2>
+      <div id="chart"></div>
+      <p id="selection-count">No commits selected</p>
+      <dl id="language-breakdown" class="stats"></dl>
+    </div>
+  </div>
 
   <dl id="commit-tooltip" class="info tooltip" hidden>
     <dt>Commit</dt>
@@ -21,15 +38,12 @@
     <dt>Date</dt>
     <dd id="commit-date"></dd>
     <dt>Time</dt>
-    <dd id="commit-time"></dd>
+    <dd id="commit-time-tooltip"></dd>
     <dt>Author</dt>
     <dd id="commit-author"></dd>
     <dt>Lines Edited</dt>
     <dd id="commit-lines"></dd>
   </dl>
-
-  <p id="selection-count">No commits selected</p>
-  <dl id="language-breakdown" class="stats"></dl>
 
   <script src="main.js" type="module"></script>
   <script src="../global.js" type="module"></script>
